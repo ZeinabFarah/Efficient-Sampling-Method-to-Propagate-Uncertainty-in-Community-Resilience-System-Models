@@ -5,7 +5,7 @@ This repository contains code for an efficient **Importance Sampling** method to
 The code folder includes two subfolders:  
 
 1. *Illustrative Example*  
-This folder contains code for an illustrative example that compares the efficiency of Importance Sampling and crude Monte Carlo in a hypothetical example.    
+This folder contains code that compares the efficiency of Importance Sampling and crude Monte Carlo in a hypothetical example.    
 
 2. *Reliability of WSN*  
 This folder contains code for determining the reliability of a hypothetical Water Supply Network (WSN) using Importance Sampling and crude Monte Carlo.    
