@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   LaTeX source code to approximate a NIST Technical report
+%	DOI and CrossMark watermark will be added on final PDF
+% 	Developed by K. Miller, kmm5@nist.gov 
+%	Last updated: 21-June-2022
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document class and template package DO NOT DELETE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{style/settings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DRAFT: TRUE OR FALSE?
+% REQUIRED!!! Select either Draft (toggletrue) or Final (togglefalse)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtoggle{draft}
+% \toggletrue{draft} % use if this is a Draft
+\togglefalse{draft} % use if this is Final
+
+\iftoggle{draft}{
+    \usepackage{lineno}
+    \linenumbers
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publication Metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\pubseries}{Series [Technical Note]} % Replace with a series title from the list below %
+% {Advanced Manufacturing Series}
+% {Data Collection Instruments}
+% {Economic Analysis Brief}
+% {Grant/Contractor Report}
+% {Handbook}
+% {IR}
+% {Special Publication}
+% {Technical Note}
+% {Technology Transfer Brief}
+% {NCSTAR}
+\newcommand{\pubnumber}{Publication Identifier} 
+\newcommand{\DOI}{https://doi.org/10.6028/NIST.XXX.XXXX}
+\newcommand{\pubmonth}{Month}
+\newcommand{\pubyear}{Year}
+\newcommand{\erratadate}{MM-DD-YYYY}
+\newcommand{\pubtitle}{Efficient Sampling Method to Propagate Uncertainty in Community Resilience System Models}
+% \newcommand{\pubsubtitle}{Subtitle} % delete if no subtitle %
+% \newcommand{\draftstage}{Draft Stage} % Draft Stage is REQUIRED for drafts/preprints; Draft stages are listed in the NIST Publication Identifier guidance: https://www.nist.gov/nist-research-library/nist-technical-series-publications-author-instructions#pubid   %
+\newcommand{\authorlist}{Author 1, Author 2, Author 3}
+\newcommand{\authorone}{Author 1}
+\newcommand{\authortwo}{Author 2}
+\newcommand{\authorthree}{Author 3}
+
+\newcommand{\pubabstract}{REQUIRED. Concise, informative statement of purpose, scope, methods, results, and conclusions/recommendations of the report. Do not include references. Required for indexing and cataloging purposes to assist with discover-ability of the report.}
+\newcommand{\keywords}{Uncertainty propagation; importance sampling; Monte Carlo; Markov chain Monte Carlo.}
+\newcommand{\publang}{English} %If translation, change to correct language%
+
+\usepackage{style/pdfproperties}
